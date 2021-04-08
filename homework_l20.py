@@ -16,6 +16,7 @@
 репозиторий.
 """
 
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -28,11 +29,9 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-
 class Person:
     def __init__(self, health):
         self.health = health
-
 
 
 class CounterTerrorist(Person):
@@ -47,7 +46,6 @@ class CounterTerrorist(Person):
     def reload(self):
         self.counter_terrorist_gun.reload()
         print(f'у {bcolors.OKBLUE}контр-террориста{bcolors.ENDC}.')
-
 
 
 class Terrorist(Person):
@@ -65,8 +63,6 @@ class Terrorist(Person):
         print(f'у {bcolors.FAIL}террориста{bcolors.ENDC}.')
 
 
-
-
 class Gun:
     def __init__(self, ammo=10):
         self.ammo = ammo
@@ -79,6 +75,7 @@ class Gun:
         self.ammo = 10
         print(f'Оружие перезаряжено. Теперь снова {self.ammo} патронов ', end='')
 
+
 class M4(Gun):
     def shoot(self):
         self.ammo -= 1
@@ -87,7 +84,6 @@ class M4(Gun):
 
 class AK(Gun):
     pass
-
 
 
 def main():
@@ -114,4 +110,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

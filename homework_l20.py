@@ -52,7 +52,7 @@ class Terrorist(Person):
     def __init__(self, terrorist_gun, health=60):
         self.terrorist_gun = terrorist_gun
         super().__init__(health)
-        print(f"{bcolors.FAIL}Террористы{bcolors.ENDC} снова рашат B!")
+        print(f"Террористы снова рашат B!\n")
 
     def shoot(self):
         self.terrorist_gun.shoot()
